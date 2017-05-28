@@ -1,0 +1,29 @@
+{
+  "name": "ads-checkout",
+  "version": "1.0.0",
+  "description": "Ads Checkout System - GDP Test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcos-goes/ads-checkout-nodejs.git"
+  },
+  "author": "Marcos Goes",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/marcos-goes/ads-checkout-nodejs/issues"
+  },
+  "homepage": "https://github.com/marcos-goes/ads-checkout-nodejs#readme",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "ejs": "^2.5.5",
+    "express": "^4.14.1",
+    "express-validator": "^3.1.2"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "supertest": "^3.0.0"
+  }
+}

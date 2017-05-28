@@ -1,0 +1,25 @@
+<% include ../includes/header.ejs %>
+
+<h2 class="basic-title">Products</h2>
+<div class="well">
+    <table class="table table-condensed table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Regular Price</td>
+        </tr>
+        </thead>
+        <tbody>
+            <% products.map(function(product){ %>
+              <tr>
+                  <td><%= product.id %></td>
+                  <td><%= product.name %></td>
+                  <td><%= product.price %></td>
+              </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+
+<% include ../includes/footer.ejs %>
