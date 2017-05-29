@@ -1,5 +1,4 @@
 //const mocha = require('mocha')
-const connectionFactory = require('../infra/connectionFactory')
 const express = require('../custom-express')()
 const request = require('supertest')(express)
 

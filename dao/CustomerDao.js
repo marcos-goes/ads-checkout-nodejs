@@ -1,8 +1,8 @@
-const customers = [{id : 'unilever',  name : 'Unilever'},
-                   {id : 'apple',     name : 'Apple'},
-                   {id : 'nike',      name : 'Nike'},
-                   {id : 'ford',      name : 'Ford'},
-                   {id : 'other',     name : 'Other'}]
+const customers = [{id : 'unilever',  name : 'Unilever', special : [{type : 'nForM', product : 'classic', param1 : 3, param2 : 2}]},
+                   {id : 'apple',     name : 'Apple', special : [{type : 'discount', product : 'standout', param1 : 299.99}]},
+                   {id : 'nike',      name : 'Nike', special : [{type : 'nOrMore', product : 'premium', param1 : 4, param2 : 379.99}]},
+                   {id : 'ford',      name : 'Ford', special : [{type : 'nForM', product : 'classic', param1 : 5, param2 : 4}, {type : 'discount', product : 'standout', param1 : 309.99}, {type : 'nOrMore', product : 'premium', param1 : 3, param2 : 389.99}]},
+                   {id : 'other',     name : 'Other', special :[]}]
 
 class CustomerDao {
 
@@ -16,11 +16,10 @@ class CustomerDao {
 
   findById(id){
     for(let i=0; i<customers.length; i++){
-      console.log('Comparing id=' + id + ' with ' + customers[i].id)
       if(id == customers[i].id)
         return customers[i]
     }
-    return null
+    return  {id : 'other',     name : 'Other'}
   }
 
 }

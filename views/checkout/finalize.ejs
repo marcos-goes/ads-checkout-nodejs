@@ -13,7 +13,13 @@
         </tr>
         </thead>
         <tbody>
-
+          <% products.map(function(product){ %>
+            <tr>
+                <td><%= product.id %></td>
+                <td><%= product.name %></td>
+                <td><%= product.quantity %></td>
+            </tr>
+          <% }) %>
         </tbody>
     </table>
 </div>
