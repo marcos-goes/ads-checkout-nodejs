@@ -3,7 +3,7 @@
 <h2 class="basic-title">Summary</h2>
 
 <div class="well">
-    Customer: <%= selectedCustomer.name %>
+    <h4><strong>Customer: </strong><%= selectedCustomer.name %></h4>
     <table class="table table-condensed table-bordered table-striped table-hover">
         <thead>
         <tr>
@@ -22,6 +22,7 @@
           <% }) %>
         </tbody>
     </table>
+    <h4><strong>Total Amount: </strong><mark>$ <%= total %></mark></h4>
 </div>
 
 

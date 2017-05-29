@@ -35,13 +35,21 @@ class CheckoutController {
       products[i].quantity = req.body[key]
     }
 
-    console.log(selectedCustomer)
-    console.log(products)
-    console.log(PricingRules.calculate(products))
+    for(let i=0; i<selectedCustomer.special.length; i++){
+      for(let j=0; j<products.length; j++){
+        if(products[j].id == selectedCustomer.special[i].product)
+          products[j].special = selectedCustomer.special[i]
+      }
+    }
+
+    let total = PricingRules.calculate(products)
 
     res.format({
       html: () => {
-        res.render('checkout/finalize', {products : products, selectedCustomer : selectedCustomer})
+        res.render('checkout/finalize', {products : products, selectedCustomer : selectedCustomer, total : total})
+      },
+      json: () => {
+        res.json(total)
       }
     })
 

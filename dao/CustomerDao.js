@@ -1,8 +1,8 @@
 const customers = [{id : 'unilever',  name : 'Unilever', special : [{type : 'nForM', product : 'classic', param1 : 3, param2 : 2}]},
-                   {id : 'apple',     name : 'Apple', special : [{type : 'discount', product : 'standout', param1 : 299.99}]},
-                   {id : 'nike',      name : 'Nike', special : [{type : 'nOrMore', product : 'premium', param1 : 4, param2 : 379.99}]},
-                   {id : 'ford',      name : 'Ford', special : [{type : 'nForM', product : 'classic', param1 : 5, param2 : 4}, {type : 'discount', product : 'standout', param1 : 309.99}, {type : 'nOrMore', product : 'premium', param1 : 3, param2 : 389.99}]},
-                   {id : 'other',     name : 'Other', special :[]}]
+                   {id : 'apple',     name : 'Apple',    special : [{type : 'discount', product : 'standout', param1 : 299.99}]},
+                   {id : 'nike',      name : 'Nike',     special : [{type : 'nOrMore', product : 'premium', param1 : 4, param2 : 379.99}]},
+                   {id : 'ford',      name : 'Ford',     special : [{type : 'nForM', product : 'classic', param1 : 5, param2 : 4}, {type : 'discount', product : 'standout', param1 : 309.99}, {type : 'nOrMore', product : 'premium', param1 : 3, param2 : 389.99}]},
+                   {id : 'other',     name : 'Other',    special : []}]
 
 class CustomerDao {
 
@@ -19,7 +19,7 @@ class CustomerDao {
       if(id == customers[i].id)
         return customers[i]
     }
-    return  {id : 'other',     name : 'Other'}
+    return  {id : 'other',     name : 'Other',    special : []}
   }
 
 }
