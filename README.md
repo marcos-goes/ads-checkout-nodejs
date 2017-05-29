@@ -3,15 +3,15 @@
 ads-checkout-nodejs
 
 
-## Instructions
+# Instructions
 
-# Requirements
+## Requirements
 Node.js and NPM installed
 
 Git (recommended)
 
 
-# How to tun this project
+## How to run this project
 
 First of all you have to clone this repository or download zip file and extract the content to your preferred location
 
@@ -40,7 +40,7 @@ Finnaly you can open your browser and type
 http://localhost:3000
 ```
 
-# Alternative
+## Alternative
 Alternatively, you can use a Docker image instead of install the application in your own machine. I would suggest this one:
 ```console
 https://hub.docker.com/_/node/
